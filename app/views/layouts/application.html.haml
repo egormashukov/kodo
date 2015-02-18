@@ -26,17 +26,17 @@
         = link_to t(:site_name), root_path, class: 'navbar-brand'
         .navbar-collapse.collapse.navbar-responsive-collapse
           %ul.nav.navbar-nav.pull-right
-            -#- if user_signed_in?
-            -#  %li= link_to "Hello #{current_user.email}"
-            -#  %li= link_to t(:sign_out), destroy_user_session_path, method: :delete
-            -#- else
-            -#  %li= link_to t(:login), new_user_session_path
-            -#  %li= link_to t(:sign_up), new_user_registration_path
+            - if user_signed_in?
+              %li= link_to "Hello #{current_user.email}"
+              - if current_user.phone.blank?
+                %li= link_to t(:please_fill_phone), edit_user_registration_path(current_user)
+              %li= link_to t(:sign_out), destroy_user_session_path, method: :delete
+            - else
+              %li= link_to t(:login), new_user_session_path
+              %li= link_to t(:sign_up), new_user_registration_path
     .container
       .row
-        .col-lg-3
-          %h2= link_to t(:new, model: t(:category)), new_category_path, class: 'btn btn-primary'
-        .col-lg-9
+        .col-lg-12
           = bootstrap_flash
           = yield
 

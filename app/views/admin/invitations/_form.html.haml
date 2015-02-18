@@ -1,0 +1,3 @@
+= form_for [:admin, resource] do |f|
+  = f.email_field :email
+  = f.submit t(:send, model: t(:invitation)), {class: 'btn btn-primary'}

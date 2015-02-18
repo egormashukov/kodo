@@ -1,0 +1,6 @@
+%h2= t(:edit, model: t(:user))
+= form_for resource, url: registration_path(resource_name), html: { method: :put } do |f|
+  = f.label :phone
+  = f.text_field :phone
+
+  = f.submit t(:update)
