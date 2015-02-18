@@ -24,10 +24,12 @@ group :development, :test do
   gem 'terminal-notifier-guard'
   gem 'fuubar'
   gem 'database_cleaner'
+  gem 'shoulda-matchers'
+  gem 'rspec-its'
+  gem 'faker'
 end
 
 group :test do
-  gem 'faker'
   gem 'capybara'
   gem 'launchy'
   gem 'selenium-webdriver'

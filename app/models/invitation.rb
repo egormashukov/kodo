@@ -5,8 +5,8 @@ class Invitation < ActiveRecord::Base
   before_create :assign_token
   after_create :send_invitation
 
-  def self.utilize!
-    update_all(available: false)
+  def utilize!
+    self.update_attribute(:available, false)
   end
 
   private

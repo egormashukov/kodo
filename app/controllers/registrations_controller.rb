@@ -7,7 +7,7 @@ class RegistrationsController < Devise::RegistrationsController
 
   def create
     super do
-      Invitation.available.by_token(params[:user][:token]).utilize!
+      Invitation.available.by_token(params[:user][:token]).each(&:utilize!)
     end
   end
 
