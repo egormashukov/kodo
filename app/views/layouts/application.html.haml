@@ -33,7 +33,6 @@
               %li= link_to t(:sign_out), destroy_user_session_path, method: :delete
             - else
               %li= link_to t(:login), new_user_session_path
-              %li= link_to t(:sign_up), new_user_registration_path
     .container
       .row
         .col-lg-12

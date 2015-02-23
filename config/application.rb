@@ -27,9 +27,7 @@ module Kodo
         user_name: 'fedttc.kubrik@yandex.ru',
         password:  'iGkt3AiDxGSLbmPg-Rplcw',
         authentication: 'login',
-        domain: 'localhost:3009'
     }
     config.active_record.raise_in_transactional_callbacks = true
-    Rails.application.routes.default_url_options[:host] = 'localhost:3000'
   end
 end
