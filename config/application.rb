@@ -28,6 +28,7 @@ module Kodo
         password:  'iGkt3AiDxGSLbmPg-Rplcw',
         authentication: 'login',
     }
+    Rails.application.routes.default_url_options[:host] = 'localhost:3000'
     config.active_record.raise_in_transactional_callbacks = true
   end
 end

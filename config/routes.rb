@@ -5,5 +5,5 @@ Rails.application.routes.draw do
     resources :invitations, only: [:new, :create]
   end
 
-  root to: 'admin/invitations#new'
+  root to: 'welcome#index'
 end

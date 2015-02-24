@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'Send invitation page' do
 
-  before { visit root_path }
+  before { visit new_admin_invitation_path }
   let(:some_email) { Faker::Internet.email }
 
   specify 'should send invitation to filled email' do
